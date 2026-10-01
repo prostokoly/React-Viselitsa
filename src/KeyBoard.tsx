@@ -47,13 +47,7 @@ const KeyBoard = ({
     disabled = false,
 }: KeyBoardProps) => {
     return (
-        <div
-            style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(75px,1fr))",
-                gap: ".5rem",
-            }}
-        >
+        <div className={styles.keyboardContainer}>
             {KEYS.map((key) => {
                 const isActive = activeLetter.includes(key);
                 const isInactive = inactiveLetter.includes(key);

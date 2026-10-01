@@ -1,13 +1,29 @@
+.keyboardContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
 .btn {
     width: 100%;
-    border: 3px solid black;
-    background: "none";
+    border: 2px solid black;
+    background: none;
     aspect-ratio: 1 / 1;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     text-transform: uppercase;
-    padding: 0.5rem;
+    padding: 0.2rem;
     font-weight: bold;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 4px;
 }
 
 .btn.active {
@@ -18,7 +34,21 @@
 .btn.inactive {
     opacity: 0.3;
 }
+
 .btn:hover:not(:disabled),
-.btn :focus:not(:disabled) {
+.btn:focus:not(:disabled) {
     background: hsl(200, 100%, 75%);
+}
+
+@media (max-width: 600px) {
+    .keyboardContainer {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 4px;
+        padding: 5px;
+    }
+
+    .btn {
+        font-size: 1.2rem;
+        border: 1.5px solid black;
+    }
 }

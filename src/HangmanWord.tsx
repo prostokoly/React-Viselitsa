@@ -1,5 +1,3 @@
-import React from "react";
-
 type HangmanWordProps = {
     guessedLetters: string[];
     wordToGuess: string;

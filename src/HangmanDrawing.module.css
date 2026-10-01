@@ -1,0 +1,13 @@
+/* .drawingContainer {
+    position: relative;
+    width: 250px;
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .drawingContainer {
+        transform: scale(0.65);
+        transform-origin: top center;
+        margin-bottom: -130px;
+    }
+} */
